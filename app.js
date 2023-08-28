@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const jwt = require("jsonwebtoken");
 const { open } = require("sqlite");
 const sqlite3 = require("sqlite3");
 app.use(express.json());
@@ -41,6 +42,10 @@ app.post("/login/", async (request, response) => {
     if (ispasssword === false) {
       response.status(400);
       response.send("Invalid password");
+    } else {
+      const payload = username;
+      const jwtToken = jwt.sign(payload, "MY_KEY");
+      response.send({ jwtToken });
     }
   }
 });
