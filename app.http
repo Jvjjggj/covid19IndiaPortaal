@@ -5,3 +5,59 @@ Content-Type: application/json
   "username": "christopher_phillips",
   "password": "christy@123"
 }
+
+### login
+
+GET http://localhost:3010/states/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
+
+### API to get all states
+
+GET http://localhost:3010/states/3/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
+
+### API to get state with respecctibve Id
+
+POST http://localhost:3010/districts/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
+Content-Type:  application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### API for adding district
+
+GET http://localhost:3010/districts/322/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
+
+
+### API gettting district with respective districtId
+
+DELETE http://localhost:3010/districts/10/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
+
+### API dellete district with respective districtId
+
+PUT http://localhost:3010/districts/1/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+### API for updating the district details
+
+GET http://localhost:3010/states/3/stats/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.Y2hyaXN0b3BoZXJfcGhpbGxpcHM.XteG3M3x9wVT3AGHtvP1DeHOCGm-pj1dYemveJuLnYc
